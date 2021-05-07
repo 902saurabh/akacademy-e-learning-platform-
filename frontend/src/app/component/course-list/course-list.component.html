@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+
+<section class="collection">
+
+  <div class="container py-5">
+    <a class="float-right" [routerLink]="" (click)="viewDetailClick()">View Details</a>
+   <!-- <h1 class="text-center">Check Out Our Courses</h1> -->
+    <div class="row py-5">
+      <div *ngFor='let course of courses;let i=index' class="col-lg-3">
+        <div class="card px-2 py-2" >
+          <img src="assets/img/img{{i+1}}.jpg" class="img-fluid mb-3">
+          <button (click)="addToCart(course._id)" id="cartButton">Add To Cart</button>
+          <br>
+          <h5>{{course.name | titlecase}}</h5>
+          <p><small><del>$24.99</del><span class="float-right">{{course.cost | currency: 'CAD' | uppercase }} = {{course.cost | rupeeConverter | currency:'INR'}}</span></small></p>
+          
+          <p [ngStyle] = "{'display':display}" >
+            <b>Instructor:</b>
+           <span [ngClass] = "{classOne:display}"> {{course.instructor}}</span>
+           <br>
+           <b>Duration:</b>
+           <span [ngClass] = "{classOne:display}">{{course.duration}}</span>
+          </p>
+          
+        </div>
+        <br>
+        
+      </div>
+      
+
+
+  </div>
+    
+  </div>
+  
+</section>
+
+<app-footer></app-footer>

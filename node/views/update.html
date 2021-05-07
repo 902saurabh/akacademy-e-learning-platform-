@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container col-lg-6">
+        <div class="header">
+            <h1>Update Course</h1>
+        </div>
+        <form action="http://localhost:5000/api/v1/courses" method="PUT">
+            <div class="form-group">
+              <label for="name">Course Name</label>
+              <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" placeholder="Enter Course Name"> 
+            </div>
+            <div class="form-group">
+              <label for="cost">Cost</label>
+              <input type="text" class="form-control" name="cost" id="cost" placeholder="In Rupee..">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea type="text" class="form-control" name="description" id="description" placeholder="course content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    
+</body>
+</html>

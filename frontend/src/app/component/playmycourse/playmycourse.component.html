@@ -1,0 +1,170 @@
+
+<app-navbar></app-navbar>
+<body>
+
+  <div class="container">
+  
+   
+    <div class="row py-5" style="height: 540px">
+
+        <div class="card col-lg-7">
+          <h3 class="text-center" style="color:yellowgreen;">{{course_name}}</h3>
+            <iframe src="https://player.vimeo.com/video/76979871?embedparameter=value" width="100%" height="100%" frameborder="0" allowfullscreen>
+        </iframe>
+        </div>
+
+        <div class="card col-lg-5 py-5">
+            <ul class="list-group">
+                <li [ngClass] = "{active:test1}" class="list-group-item" (onclick)="check1()">
+                    <div>
+                       <h5>1.Basic Introduction</h5>
+                        <p>In-depth understanding and advanced usage of Python's numerical data types (Booleans, Integers, Floats, Decimals, Fractions, Complex Numbers)  </p>
+                    </div>
+                </li>
+                <li [ngClass] = "{active:test2}" class="list-group-item">
+                    <div  (onclick)="check2()">
+                        <h5>2.Class and Decorator</h5>
+                         <p>Create advanced decorators, including parametrized decorators, class decorators, and decorator classes</p>
+                     </div>
+                </li>
+                <li [ngClass] = "{active:test3}" class="list-group-item" (onclick)="check3()">
+                    <div>
+                        <h5>3.Modules and packages</h5>
+                         <p>Use and understand Python's complex Module and Package system</p>
+                     </div>
+                </li>
+                <li [ngClass] = "{active:test4}" class="list-group-item" (onclick)="check4()">
+                    <div>
+                        <h5>4.Memoization</h5>
+                         <p>Advanced decorator applications such as memoization and single dispatch generic functions
+                        </p>
+                     </div>
+                </li>
+                <li [ngClass] = "{active:test5}" class="list-group-item" (onclick)="check5()">
+                    <div>
+                        <h5>5.Memory management</h5>
+                         <p>A deep dive into Python's memory management and optimizations</p>
+                     </div>
+                </li>
+                <li [ngClass] = "{active:test6}" class="list-group-item" (onclick)="check6()">
+                    <div>
+                        <h5>6.Time Complexity</h5>
+                        <p>Understand Python's compile-time and run-time and how this affects your code</p>
+                     </div>
+                </li>
+                <li [ngClass] = "{active:test7}" class="list-group-item" (onclick)="check7()">
+                    <div>
+                        <h5>7.Practice</h5>
+                         <p>Idiomatic Python and best practices</p>
+                     </div>
+                </li>
+              </ul>
+           
+        </div>
+
+    </div>
+
+    
+    
+
+
+</div>
+
+
+
+  
+</body>
+
+
+
+
+
+<!--<html>
+
+<body>
+    <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+
+      <article class="video">
+        <figure>
+          <a class="fancybox fancybox.iframe" href="https://player.vimeo.com/video/76979871">
+          <img class="videoThumb" src="//i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+</body>
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.fancybox').fancybox({
+        padding   : 0,
+        maxWidth  : '100%',
+        maxHeight : '100%',
+        width   : 560,
+        height    : 315,
+        autoSize  : true,
+        closeClick  : true,
+        openEffect  : 'elastic',
+        closeEffect : 'elastic'
+      });
+    });
+  </script>
+</html>
+
+-->
